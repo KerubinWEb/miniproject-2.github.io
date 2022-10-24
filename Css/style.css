@@ -3,9 +3,26 @@
 * {
     font-family: 'Poppins', sans-serif !important;
     transition:all 0.3s linear;
+    text-decoration: none !important;
 }
 body{
     background:#f7f7f7;
+    
+  }
+
+  :root{
+    --red:#ff3838;
+  }
+
+  /* Navbar */
+  .logo {
+    color:#ff3838;
+  }
+  .logo:hover {
+    color: limegreen;
+  }
+  .nav-link:hover {
+    color: #ff3838 !important;
   }
 
 
@@ -17,6 +34,7 @@ body{
 .main-content h3{
     font-size: 3rem;
     color:#333;
+    font-weight: 600;
 }
   
 .main-content p{
@@ -33,6 +51,43 @@ body{
     50%{
       transform: translateY(3rem);
     }
+}
+
+.btn-pink{
+  display: inline-block;
+  padding: 10px 30px;
+  border:2px solid var(--red);
+  color:var(--red);
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn-pink::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--red);
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.btn-pink:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn-pink:hover{
+  color:#fff;
+}
+.typing-text {
+  color: #ff3838;
 }
 /* .need-margin {
     margin-left: 400px;
@@ -58,5 +113,8 @@ body{
 
 
   /* Specialty */
- 
+ .text-special {
+  font-size: 2.5rem;
+  font-weight: 600;
+ }
   

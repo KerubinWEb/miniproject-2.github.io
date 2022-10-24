@@ -1,4 +1,4 @@
-const texts = ['Burger','Pizza','Ice Cream','Cake','Drinks'];
+const texts = ['Burger','Pizza','Desserts','Pasta'];
 
 let count = 0;
 let index = 0;
