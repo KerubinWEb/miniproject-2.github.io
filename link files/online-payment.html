@@ -10,7 +10,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="../Css/style.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -20,9 +20,7 @@
     <!-- Header Start -->
     <nav class="navbar navbar-expand-lg bg-light shadow">
       <div class="container-fluid p-1 ms-5">
-        <a class="navbar-brand fs-4 fw-bolder ms-5" href="index.html"
-          >My Food</a
-        >
+        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="../index.html">Food Hunter</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav m-auto fs-5 fw-semibold">
             <li class="nav-item me-3">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item dropdown me-3">
               <a
@@ -58,25 +56,25 @@
               </ul>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link active" href="online-payment.html">Online Payment</a>
+              <a class="nav-link" href="./online-payment.html">Online Payment</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="delivery.html">Delivery</a>
+              <a class="nav-link" href="./delivery.html">Delivery</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </li>
           </ul>
           <div class="d-flex">
             <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              ><i class="bx bxs-cart fs-2 me-3"></i
+              ><i class="bx bxs-user fs-2 me-3"></i
             ></a>
             <a
               href=""
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
-              ><i class="bx bxs-user fs-2 me-3"></i
+              ><i class="bx bxs-cart fs-2 me-3"></i
             ></a>
             <i class="bx bxs-moon fs-2 me-5"></i>
           </div>
@@ -84,6 +82,78 @@
       </div>
     </nav>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form from name="login" onsubmit="return accountLogin()">
+              <div class="form-group">
+                <label for="text">Username:</label>
+                <input type="text" class="form-control" id="username" />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <div class="form-group">
+                Need an account?
+                <a href="accountreg.html"><span> Register</span></a>
+              </div>
+              <div class="container form-group">
+                <div class="row">
+                  <div class="col-lg-9 p-0 m-0 form-group">
+                    <input type="checkbox" name="remember" id="remember" />
+                    <label for="remember">Remember Me</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <button type="submit">Log in</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
+    </div>
+
+    <!-- Header End -->
     <!-- payment form -->
 
     <section style="background-color: #eee;">
@@ -230,6 +300,63 @@
       </section>
 
     <!-- /payment form -->
+
+    <!-- Footer -->
+    <div class="container-fluid bg-light shadow mt-5 pt-3 pb-3 footer-text bg-dark text-white">
+      <div class="container">
+        <div class="row ">
+          <div class="col-4">
+            <h3 class="pb-2">Opening Hours</h3>
+            <p>Monday : 8:00am To 10:00pm</p>
+            <p>Tuesday : 8:00am To 10:00pm</p>
+            <p>Wednesday : 8:00am To 10:00pm</p>
+            <p>Friday : 8:00am To 10:00pm</p>
+            <p>Saturday: 9:00am To 12:00pm</p>
+            <p>Sunday: 9:00am To 12:00pm</p>
+          </div>
+          <div class="col-4 ">
+            <h3 class="pb-2">Branch Locations</h3>
+            <div class="row">
+              <div class="col"><p>SM Megamall</p>
+                <p>SM North Edsa</p>
+                <p>SM Marilao</p>
+                <p>SM San Fernando</p>
+                <p>Mall of Asia</p></div>
+              <div class="col">
+              <p>Shangrila Shaw</p>
+              <p>SM Iloilo</p>
+              <p>SM Novaliches</p>
+              <p>SM Alabang</p>
+              </div>
+            </div>
+            
+          </div>
+            
+          <div class="col-4">
+            <h3 class="pb-2">Follow Us</h3>
+            <div class="boxicon">
+            <a href="https://www.facebook.com/"> <i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt ms-2' ></i></a>
+            <a href="https://twitter.com/?lang=en"><i class='bx bxl-twitter ms-2' ></i></a>
+            <a href="https://www.youtube.com/"><i class='bx bxl-youtube ms-2' ></i></a>
+            <a href="https://www.pinterest.ph/"><i class='bx bxl-pinterest ms-2' ></i></a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <div class="loader-container">
+        <img src="./images/loader.gif" alt="">
+    </div> -->
 
   </body>
 </html>

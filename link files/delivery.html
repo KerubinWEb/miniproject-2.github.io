@@ -20,9 +20,7 @@
     <!-- Header Start -->
     <nav class="navbar navbar-expand-lg bg-light shadow">
       <div class="container-fluid p-1 ms-5">
-        <a class="navbar-brand fs-4 fw-bolder ms-5" href="../index.html"
-          >My Food</a
-        >
+        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="../index.html">Food Hunter</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav m-auto fs-5 fw-semibold">
             <li class="nav-item me-3">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item dropdown me-3">
               <a
@@ -58,10 +56,10 @@
               </ul>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Online Payment</a>
+              <a class="nav-link" href="./online-payment.html">Online Payment</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link active" href="./delivery.html">Delivery</a>
+              <a class="nav-link" href="./delivery.html">Delivery</a>
             </li>
             <li class="nav-item me-3">
               <a class="nav-link" href="./contact.html">Contact</a>
@@ -69,14 +67,14 @@
           </ul>
           <div class="d-flex">
             <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              ><i class="bx bxs-cart fs-2 me-3"></i
+              ><i class="bx bxs-user fs-2 me-3"></i
             ></a>
             <a
               href=""
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
-              ><i class="bx bxs-user fs-2 me-3"></i
+              ><i class="bx bxs-cart fs-2 me-3"></i
             ></a>
             <i class="bx bxs-moon fs-2 me-5"></i>
           </div>
@@ -84,6 +82,78 @@
       </div>
     </nav>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form from name="login" onsubmit="return accountLogin()">
+              <div class="form-group">
+                <label for="text">Username:</label>
+                <input type="text" class="form-control" id="username" />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <div class="form-group">
+                Need an account?
+                <a href="accountreg.html"><span> Register</span></a>
+              </div>
+              <div class="container form-group">
+                <div class="row">
+                  <div class="col-lg-9 p-0 m-0 form-group">
+                    <input type="checkbox" name="remember" id="remember" />
+                    <label for="remember">Remember Me</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <button type="submit">Log in</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
+    </div>
+
+    <!-- Header End -->
     <!-- banner -->
 
     <section>
