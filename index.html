@@ -10,7 +10,10 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./Css/style.css" />
     <link
       rel="stylesheet"
@@ -21,7 +24,9 @@
     <!-- Header Start -->
     <nav class="navbar navbar-expand-lg bg-light shadow">
       <div class="container-fluid p-1 ms-5">
-        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="#">Food Hunter</a>
+        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="#"
+          >Food Hunter</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -49,7 +54,15 @@
                 Menu
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Burger</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#BurgerModal"
+                    >Burger</a
+                  >
+                </li>
                 <li><a class="dropdown-item" href="#">Pizza</a></li>
                 <li><a class="dropdown-item" href="#">Ice Cream</a></li>
                 <li><a class="dropdown-item" href="#">Drinks</a></li>
@@ -57,7 +70,9 @@
               </ul>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="./link files/online-payment.html">Online Payment</a>
+              <a class="nav-link" href="./link files/online-payment.html"
+                >Online Payment</a
+              >
             </li>
             <li class="nav-item me-3">
               <a class="nav-link" href="./link files/delivery.html">Delivery</a>
@@ -94,7 +109,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Login Account
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -108,22 +125,26 @@
                 <label for="text">Username:</label>
                 <input type="text" class="form-control" id="username" />
               </div>
-              <div class="form-group">
+              <div class="form-group pb-4">
                 <label for="pwd">Password:</label>
                 <input type="password" class="form-control" id="password" />
               </div>
-              <div class="form-group">
+              <div class="form-group pb-4">
                 Need an account?
-                <a href="accountreg.html"><span> Register</span></a>
+                <a
+                  href="accountreg.html"
+                  data-bs-toggle="modal"
+                  data-bs-target="#RegisterModal"
+                >
+                  Register</a
+                >
               </div>
-              <div class="container form-group">
+              <div class="container-fluid">
                 <div class="row">
-                  <div class="col-lg-9 p-0 m-0 form-group">
-                    <input type="checkbox" name="remember" id="remember" />
-                    <label for="remember">Remember Me</label>
-                  </div>
-                  <div class="col-lg-3">
-                    <button type="submit">Log in</button>
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary">
+                      Log in
+                    </button>
                   </div>
                 </div>
               </div>
@@ -132,6 +153,183 @@
         </div>
       </div>
     </div>
+
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="RegisterModal"
+      tabindex="-1"
+      aria-labelledby="RegisterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="RegisterModalLabel">
+              Create Account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-lg-12">
+              <div class="form-group text-primary">
+                <label for="firstname">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  placeholder="Juan"
+                />
+                <label for="lastname">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="dela Cruz"
+                />
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="juan01"
+                />
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="*****"
+                />
+                <label for="conpass">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control "
+                  id="conpass"
+                  placeholder="*****"
+                /><br>
+              <button type="button " class="btn btn-primary col-lg-12">Create account</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Burger Modal -->
+
+    <div
+      class="modal fade"
+      id="BurgerModal"
+      tabindex="-1"
+      aria-labelledby="BurgerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="BurgerModalLabel">Burger Menu</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="./images/s-img-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal end -->
 
     <div
@@ -182,40 +380,84 @@
 
     <!-- How our Food Made -->
     <div class="container">
-      <h3 class="text-center text-special pb-5">How Our <span class="typing-text">Food is Made</span></h3>
+      <h3 class="text-center text-special pb-5">
+        How Our <span class="typing-text">Food is Made</span>
+      </h3>
       <div class="row">
         <div class="col-6">
-          <video width="100%" height="100%" autoplay loop muted controls class="shadow">
+          <video
+            width="100%"
+            height="100%"
+            autoplay
+            loop
+            muted
+            controls
+            class="shadow"
+          >
             <source src="./images/video/burdermade.mp4" type="video/mp4" />
           </video>
-          </div>
+        </div>
         <div class="col-6">
           <h4 class="fw-bold pt-1">Classic Cheese Burger</h4>
-          <p>Generously salt and pepper both sides of the burger patties. Place the burgers on the grill grates and cook, uncovered, for 3 to 5 minutes a side, depending on the desired level of doneness. If you're adding cheese to make cheeseburgers, add the cheese in the last minute and cover the grill to help it melt</p>
+          <p>
+            Generously salt and pepper both sides of the burger patties. Place
+            the burgers on the grill grates and cook, uncovered, for 3 to 5
+            minutes a side, depending on the desired level of doneness. If
+            you're adding cheese to make cheeseburgers, add the cheese in the
+            last minute and cover the grill to help it melt
+          </p>
         </div>
       </div>
 
       <div class="row mt-5">
         <div class="col-6">
-          <video width="100%" height="100%" autoplay loop muted controls class="shadow">
+          <video
+            width="100%"
+            height="100%"
+            autoplay
+            loop
+            muted
+            controls
+            class="shadow"
+          >
             <source src="./images/video/pizzamade.mp4" type="video/mp4" />
           </video>
-          </div>
+        </div>
         <div class="col-6">
           <h4>Classic Cheese Burger</h4>
-          <p>Generously salt and pepper both sides of the burger patties. Place the burgers on the grill grates and cook, uncovered, for 3 to 5 minutes a side, depending on the desired level of doneness. If you're adding cheese to make cheeseburgers, add the cheese in the last minute and cover the grill to help it melt</p>
+          <p>
+            Generously salt and pepper both sides of the burger patties. Place
+            the burgers on the grill grates and cook, uncovered, for 3 to 5
+            minutes a side, depending on the desired level of doneness. If
+            you're adding cheese to make cheeseburgers, add the cheese in the
+            last minute and cover the grill to help it melt
+          </p>
         </div>
       </div>
 
       <div class="row mt-5">
         <div class="col-6">
-          <video width="100%" height="100%" autoplay loop muted controls class="shadow">
+          <video
+            width="100%"
+            height="100%"
+            autoplay
+            loop
+            muted
+            controls
+            class="shadow"
+          >
             <source src="./images/video/pastamade.mp4" type="video/mp4" />
           </video>
-          </div>
+        </div>
         <div class="col-6">
           <h4>Classic Cheese Burger</h4>
-          <p>Generously salt and pepper both sides of the burger patties. Place the burgers on the grill grates and cook, uncovered, for 3 to 5 minutes a side, depending on the desired level of doneness. If you're adding cheese to make cheeseburgers, add the cheese in the last minute and cover the grill to help it melt</p>
+          <p>
+            Generously salt and pepper both sides of the burger patties. Place
+            the burgers on the grill grates and cook, uncovered, for 3 to 5
+            minutes a side, depending on the desired level of doneness. If
+            you're adding cheese to make cheeseburgers, add the cheese in the
+            last minute and cover the grill to help it melt
+          </p>
         </div>
       </div>
     </div>
@@ -230,13 +472,13 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/s-img-1.jpg" class="card-img-top" alt="..." />
+              <img src="./images/s-img-1.jpg" class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">Combo Cheese Burger</h5>
               <p class="card-text">
                 Combination of American Cheese, Swiss Cheese, Mozzarella Cheese,
-                 and topped with a Special Cheese Sauce!
+                and topped with a Special Cheese Sauce!
               </p>
               <a href="#" class="btn special-btn">Add to CArt</a>
             </div>
@@ -245,7 +487,7 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/s-img-2.jpg" class="card-img-top" alt="..." />
+              <img src="./images/s-img-2.jpg" class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">SeaFood Pizza</h5>
@@ -260,13 +502,13 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/s-img-3.jpg" class="card-img-top" alt="..." />
+              <img src="./images/s-img-3.jpg" class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">Strawberry Ice Cream</h5>
               <p class="card-text">
                 Super rich and milky, this strawberry ice cream is filled with
-                 jammy ribbons of fruity deliciousness.
+                jammy ribbons of fruity deliciousness.
               </p>
               <a href="#" class="btn special-btn">Add To Cart</a>
             </div>
@@ -275,13 +517,13 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/g-3.jpg" class="card-img-top" alt="..." />
-           </div>
+              <img src="./images/g-3.jpg" class="card-img-top" alt="..." />
+            </div>
             <div class="card-body">
               <h5 class="card-title">King Chicken Shawarma</h5>
               <p class="card-text">
-                Loaded with fresh chicken shawarma, pickles and our special in house garlic sauce.
-                 Grilled to perfection and served.
+                Loaded with fresh chicken shawarma, pickles and our special in
+                house garlic sauce. Grilled to perfection and served.
               </p>
               <a href="#" class="btn special-btn">Add To Cart</a>
             </div>
@@ -293,13 +535,17 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/spaghetti-meatballs.jpg" class="card-img-top" alt="..." />
+              <img
+                src="./images/spaghetti-meatballs.jpg"
+                class="card-img-top"
+                alt="..."
+              />
             </div>
             <div class="card-body">
               <h5 class="card-title">MeatBalls Spaghetti</h5>
               <p class="card-text">
-                Meaty Spaghetti ala italian with basil leaves and parmesan cheese
-                ,you will love this.
+                Meaty Spaghetti ala italian with basil leaves and parmesan
+                cheese ,you will love this.
               </p>
               <a href="#" class="btn special-btn">Add to CArt</a>
             </div>
@@ -308,13 +554,17 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/banana-almond-smoothie-dark-background.jpg" class="card-img-top" alt="..." />
+              <img
+                src="./images/banana-almond-smoothie-dark-background.jpg"
+                class="card-img-top"
+                alt="..."
+              />
             </div>
             <div class="card-body">
               <h5 class="card-title">Banana Almond Smoothie</h5>
               <p class="card-text">
-                Fresh Sweet Banana and Almond Combine with milky flavor,
-                it will gives you a refreshment.
+                Fresh Sweet Banana and Almond Combine with milky flavor, it will
+                gives you a refreshment.
               </p>
               <a href="#" class="btn special-btn">Add To Cart</a>
             </div>
@@ -323,13 +573,13 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/p-2.jpg" class="card-img-top" alt="..." />
+              <img src="./images/p-2.jpg" class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">Orange Cheese Cake</h5>
               <p class="card-text">
-                Fresh Orange and Special cheese that will easly melt in your mouth
-                ,super organic igredients.
+                Fresh Orange and Special cheese that will easly melt in your
+                mouth ,super organic igredients.
               </p>
               <a href="#" class="btn special-btn">Add To Cart</a>
             </div>
@@ -338,13 +588,13 @@
         <div class="col-3">
           <div class="card shadow" style="width: 100%">
             <div class="inner">
-            <img src="./images/p-5.jpg " class="card-img-top" alt="..." />
-           </div>
+              <img src="./images/p-5.jpg " class="card-img-top" alt="..." />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Fruity Juice</h5>
               <p class="card-text">
-                Kiwi with lemon juice, strawberry juice and orange juice made with Super
-                fresh fruits. 
+                Kiwi with lemon juice, strawberry juice and orange juice made
+                with Super fresh fruits.
               </p>
               <a href="#" class="btn special-btn">Add To Cart</a>
             </div>
@@ -394,14 +644,15 @@
     <!-- how it works end -->
 
     <!-- Costumer Review -->
-    
 
     <!-- Review End -->
 
     <!-- Footer -->
-    <div class="container-fluid bg-light shadow mt-5 pt-3 pb-3 footer-text bg-dark text-white">
+    <div
+      class="container-fluid bg-light shadow mt-5 pt-3 pb-3 footer-text bg-dark text-white"
+    >
       <div class="container">
-        <div class="row ">
+        <div class="row">
           <div class="col-4">
             <h3 class="pb-2">Opening Hours</h3>
             <p>Monday : 8:00am To 10:00pm</p>
@@ -411,33 +662,44 @@
             <p>Saturday: 9:00am To 12:00pm</p>
             <p>Sunday: 9:00am To 12:00pm</p>
           </div>
-          <div class="col-4 ">
+          <div class="col-4">
             <h3 class="pb-2">Branch Locations</h3>
             <div class="row">
-              <div class="col"><p>SM Megamall</p>
+              <div class="col">
+                <p>SM Megamall</p>
                 <p>SM North Edsa</p>
                 <p>SM Marilao</p>
                 <p>SM San Fernando</p>
-                <p>Mall of Asia</p></div>
+                <p>Mall of Asia</p>
+              </div>
               <div class="col">
-              <p>Shangrila Shaw</p>
-              <p>SM Iloilo</p>
-              <p>SM Novaliches</p>
-              <p>SM Alabang</p>
+                <p>Shangrila Shaw</p>
+                <p>SM Iloilo</p>
+                <p>SM Novaliches</p>
+                <p>SM Alabang</p>
               </div>
             </div>
-            
           </div>
-            
+
           <div class="col-4">
             <h3 class="pb-2">Follow Us</h3>
             <div class="boxicon">
-            <a href="https://www.facebook.com/"> <i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt ms-2' ></i></a>
-            <a href="https://twitter.com/?lang=en"><i class='bx bxl-twitter ms-2' ></i></a>
-            <a href="https://www.youtube.com/"><i class='bx bxl-youtube ms-2' ></i></a>
-            <a href="https://www.pinterest.ph/"><i class='bx bxl-pinterest ms-2' ></i></a>
-          </div>
+              <a href="https://www.facebook.com/">
+                <i class="bx bxl-facebook-circle"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="bx bxl-instagram-alt ms-2"></i
+              ></a>
+              <a href="https://twitter.com/?lang=en"
+                ><i class="bx bxl-twitter ms-2"></i
+              ></a>
+              <a href="https://www.youtube.com/"
+                ><i class="bx bxl-youtube ms-2"></i
+              ></a>
+              <a href="https://www.pinterest.ph/"
+                ><i class="bx bxl-pinterest ms-2"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
