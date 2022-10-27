@@ -39,17 +39,26 @@ let letter = '';
 //         }).then((completedata)=>{
 //           let data1="";
 //           completedata.map((values)=>{
-//             data1+=`<div class="card" style="width: 200px">
-//           <img src=${values.img} class="card-img-top" alt="...">
-//           <div class="card-body">
-//             <h5 class="card-title">${values.name}</h5>
-//             <p class="card-text">${values.dsc}</p>
-//             <a href="#" class="btn btn-primary">${values.price}</a>
-//           </div>
-//         </div> `
+//             data1+=`<div class="card shadow" style="width: 250px; height: 300px">
+//             <div class="inner">
+//             <img src=${values.img} class="card-img-top" alt="..." />
+//             </div>
+//             <div class="card-body">
+//               <h5 class="card-title">${values.name}</h5>
+//               <p class="card-text">
+//               ${values.dsc}
+//               </p>
+//               <p>Php ${values.price}</p>
+//               <a href="#" class="btn special-btn" onclick="Addtocart(${values.name})">Add to Cart</a>
+//             </div>
+//           </div>`
 //           });
-//           document.getElementById('show').innerHTML=data1;
+//           document.getElementById("showna").innerHTML=data1;
 //         }).catch((err)=>{
 //           console.log(err);
 //         });
 
+//         function Addtocart (name) {
+//             console.log(name);
+//         }
+        

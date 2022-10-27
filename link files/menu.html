@@ -10,6 +10,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../Css/style.css" />
     <link
       rel="stylesheet"
@@ -18,9 +19,9 @@
   </head>
   <body>
     <!-- Header Start -->
-    <nav class="navbar navbar-expand-lg bg-light shadow">
+    <nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
       <div class="container-fluid p-1 ms-5">
-        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="../index.html">Food Hunter</a>
+        <a class="navbar-brand fs-4 fw-bolder ms-5 logo" href="./index.html">Food Hunter</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,7 +40,7 @@
             </li>
             <li class="nav-item  me-3">
               <a
-                class="nav-link"
+                class="nav-link active"
                 href="./menu.html"
               >
                 Menu
@@ -49,7 +50,7 @@
               <a class="nav-link" href="./online-payment.html">Online Payment</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link active" href="./delivery.html">Delivery</a>
+              <a class="nav-link" href="./delivery.html">Delivery</a>
             </li>
             <li class="nav-item me-3">
               <a class="nav-link" href="./contact.html">Contact</a>
@@ -61,9 +62,7 @@
             ></a>
             <a
               href=""
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"
               ><i class="bx bxs-cart fs-2 me-3"></i
             ></a>
             <i class="bx bxs-moon fs-2 me-5"></i>
@@ -123,154 +122,45 @@
     </div>
     <!-- Modal end -->
 
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel"
-    >
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">
-          Offcanvas right
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Your Order</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">...</div>
+      <div class="offcanvas-body">
+        <div>
+          <div class="row">
+           <div class="col">Menu</div>
+           <div class="col">Name</div>
+           <div class="col">Price</div>
+           <div class="col">Quantity</div>
+          </div>
+          <div id="showOrder"></div>
+          
+
+        </div>
+      </div>
     </div>
 
     <!-- Header End -->
-    <!-- banner -->
 
-    <section>
-      <div class="container py-5 text-center">
-        <div class="row justify-content-center">
-          <h1>My Food Delivery</h1>
-        </div>
-      </div>
-    </section>
+    <!-- Hero Main Start -->
+   <div class="container burger-menu">
+    <h1 class="text-center mb-5">Burger Menu</h1>
+    <div class="grid" id="showna">
+  
+  </div>
 
-    <!-- /banner -->
+   </div>
+    
+    <!-- Hero Main End -->
 
-    <!-- main hero -->
+    
 
-    <div class="container main-hero">
-      <div class="row main-content">
-        <div class="col-lg-6 main-imgD">
-          <img
-            src="../images/icon/delivery.png"
-            alt="loading pizza"
-            style="width: 80%"
-          />
-        </div>
+    <!-- Review End -->
+    <div class="container" id="showna">
 
-        <div class="col-lg-6 align-self-center">
-          <h3>Delivery</h3>
-          <p>
-            Ordering from My Food has never been easier! Call +639266566589, Click Order
-            Now! to go to MyFoodDelivery.com or tap the My Food app. Satisfy
-            your cravings and have your My Food favorites delivered right to
-            your doorstep!
-          </p>
-          <a href="#" class="btn-pink">Order Now!</a>
-        </div>
-      </div>
     </div>
-
-    <!-- /main hero -->
-
-    <!-- order section starts  -->
-
-    <section class="order" id="order">
-      <div class="heading">
-        <span>Order now</span>
-        <h3>Fastest home delivery</h3>
-      </div>
-
-      <div class="icons-container">
-        <div class="icons">
-          <img src="../images/icon/icon-1.png" alt="" />
-          <h3>7:00am to 10:30pm</h3>
-        </div>
-
-        <div class="icons">
-          <img src="../images/icon/icon-2.png" alt="" />
-          <h3>+639266566589</h3>
-        </div>
-
-        <div class="icons">
-          <img src="../images/icon/icon-3.png" alt="" />
-          <h3>#5 4th Street North Signal Village Taguig City</h3>
-        </div>
-      </div>
-
-      <form action="">
-        <div class="flex">
-          <div class="inputBox">
-            <span>Your name</span>
-            <input type="text" placeholder="customer's name" name="" id="" />
-          </div>
-          <div class="inputBox">
-            <span>Your number</span>
-            <input
-              type="number"
-              placeholder="customer's number"
-              name=""
-              id=""
-            />
-          </div>
-        </div>
-
-        <div class="flex">
-          <div class="inputBox">
-            <span>Your order</span>
-            <input type="text" placeholder="food you want" name="" id="" />
-          </div>
-          <div class="inputBox">
-            <span>How many</span>
-            <input type="number" placeholder="number of orders" name="" id="" />
-          </div>
-        </div>
-
-        <div class="flex">
-          <div class="inputBox">
-            <span>Your details</span>
-            <input type="text" placeholder="your message" name="" id="" />
-          </div>
-          <div class="inputBox">
-            <span>Pick up time</span>
-            <input type="datetime-local" />
-          </div>
-        </div>
-
-        <div class="flex">
-          <div class="inputBox">
-            <textarea
-              placeholder="your address"
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-          <div class="inputBox">
-            <iframe
-              class="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.506583936224!2d121.05731771478804!3d14.512991389858326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf4bb332700f%3A0xa094226d1ad5bc95!2s5%204th%20St%2C%20Manila%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1663901619713!5m2!1sen!2sph"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-
-        <a href="#" class="btn-pink">Order Now!</a>
-      </form>
-    </section>
-
-    <!-- order section ends -->
 
     <!-- Footer -->
     <div class="container-fluid bg-light shadow mt-5 pt-3 pb-3 footer-text bg-dark text-white">
@@ -317,13 +207,15 @@
       </div>
     </div>
 
-    <script src="./Js/script.js"></script>
+    <script src="../Js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="../Js/burger.js"></script>
+    <script src="../Js/app.js"></script>
 
     <!-- <div class="loader-container">
         <img src="./images/loader.gif" alt="">
