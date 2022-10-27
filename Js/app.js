@@ -26,7 +26,7 @@ let cart = [];
 
 function Addtocart(id) {
   if (cart.some ((item) => item.id ===id)){
-    alert("Product here")
+    alert("Menu already choose")
   }
   else {
     const item =Burgers.find((Burger) => Burger.id === id);
